@@ -1,0 +1,12 @@
+---
+
+- name: test ansible
+  hosts: test
+  become: True
+
+  tasks:
+
+    - name: create path
+      ansible.builtin.file:
+        path: /hello
+        state: touch
